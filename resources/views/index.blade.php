@@ -1,4 +1,4 @@
-@extends('app', ['page_title' => 'Project Tracker', 'more' => 2])
+@extends('app', ['page_title' => 'IT Project Tracker', 'more' => 2])
 
 <?php
 use GuzzleHttp\Client;

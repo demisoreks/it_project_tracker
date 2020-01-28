@@ -11,7 +11,7 @@
 |
 */
 
-$link_id = 5;
+$link_id = (int) env('LINK_ID', '0');
 
 Route::get('/', [
     'as' => 'welcome', 'uses' => 'WelcomeController@index'
