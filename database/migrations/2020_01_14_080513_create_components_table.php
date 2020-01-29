@@ -16,7 +16,7 @@ class CreateComponentsTable extends Migration
         Schema::create('ipt_components', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('project_id')->unsigned();
-            $table->foreign('project_id')->references('id')->on('ptr_projects');
+            $table->foreign('project_id')->references('id')->on('ipt_projects');
             $table->string('description', 100);
             $table->date('start_date');
             $table->date('end_date');

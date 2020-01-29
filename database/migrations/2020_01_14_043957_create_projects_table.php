@@ -16,7 +16,7 @@ class CreateProjectsTable extends Migration
         Schema::create('ipt_projects', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('vendor_id')->unsigned();
-            $table->foreign('vendor_id')->references('id')->on('ptr_vendors');
+            $table->foreign('vendor_id')->references('id')->on('ipt_vendors');
             $table->string('name', 100);
             $table->string('description', 1000);
             $table->date('start_date');

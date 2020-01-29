@@ -16,7 +16,7 @@ class CreateUpdatesTable extends Migration
         Schema::create('ipt_updates', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('project_id')->unsigned();
-            $table->foreign('project_id')->references('id')->on('ptr_projects');
+            $table->foreign('project_id')->references('id')->on('ipt_projects');
             $table->string('component_updates', 1000);
             $table->decimal('amount_spent', 10, 2);
             $table->string('remarks', 1000);
