@@ -13,6 +13,8 @@ use GuzzleHttp\Client;
         {!! Html::style('css/app.css') !!}
         {!! Html::style('css/mdb.min.css') !!}
         {!! Html::style('css/datatables.min.css') !!}
+        {!! Html::style('css/responsive.dataTables.min.css') !!}
+        {!! Html::style('css/buttons.dataTables.min.css') !!}
         {!! Html::style('fontawesome/css/all.css') !!}
         
         {!! Html::script('js/jquery-3.3.1.min.js') !!}
@@ -20,6 +22,14 @@ use GuzzleHttp\Client;
         {!! Html::script('js/app.js') !!}
         {!! Html::script('js/mdb.min.js') !!}
         {!! Html::script('js/datatables.min.js') !!}
+        {!! Html::script('js/dataTables.responsive.min.js') !!}
+        {!! Html::script('js/dataTables.buttons.min.js') !!}
+        {!! Html::script('js/buttons.flash.min.js') !!}
+        {!! Html::script('js/jszip.min.js') !!}
+        {!! Html::script('js/pdfmake.min.js') !!}
+        {!! Html::script('js/vfs_fonts.js') !!}
+        {!! Html::script('js/buttons.html5.min.js') !!}
+        {!! Html::script('js/buttons.print.min.js') !!}
         
         <script type="text/javascript">
             $(document).ready(function () {
@@ -32,6 +42,13 @@ use GuzzleHttp\Client;
                 $('#myTable3').DataTable({
                     fixedHeader: true,
                     "order": [[ 0, "desc" ]]
+                });
+                $('#myTable4').DataTable({
+                    fixedHeader: true,
+                    dom: 'Bfrtip',
+                    buttons: [
+                        'excel', 'print'
+                    ]
                 });
             });
             
