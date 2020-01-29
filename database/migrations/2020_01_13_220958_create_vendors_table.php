@@ -17,8 +17,8 @@ class CreateVendorsTable extends Migration
             $table->increments('id');
             $table->string('name', 100);
             $table->unique('name');
-            $table->string('mobile_no')->nullable;
-            $table->string('email')->nullable;
+            $table->string('mobile_no');
+            $table->string('email');
             $table->boolean('active')->default(true);
             $table->timestamps();
         });
