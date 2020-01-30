@@ -87,7 +87,7 @@ use GuzzleHttp\Client;
     $res = $client->request('GET', DB::table('acc_config')->whereId(1)->first()->master_url.'/api/getRoles', [
         'query' => [
             'username' => $halo_user->username,
-            'link_id' => 2
+            'link_id' => (int) env('LINK_ID', '0')
         ]
     ]);
     $permissions = json_decode($res->getBody());
